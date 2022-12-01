@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".root", ".root", "{68D77ADB-3C71-475E-B70C-ACB139FAD952}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		README.md = README.md
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{370DF490-AA80-48D5-BBFB-C8FC81C626DA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{D81C9A65-19B7-40A7-A8AE-4D59A1035647}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayOne", "src\DayOne\DayOne.csproj", "{DA23EBCC-F8AA-4176-8FFF-41A488EB9E55}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{40DF1A33-9995-49FA-970F-AE4991962E35}"
+	ProjectSection(SolutionItems) = preProject
+		docs\DayOne.md = docs\DayOne.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "benchmarks", "benchmarks", "{8E326F26-C854-4E51-A66B-140CAAA05417}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayOne.Tests.Benchmarks", "tests\benchmarks\DayOne.Tests.Benchmarks\DayOne.Tests.Benchmarks.csproj", "{A7F66047-A88B-4266-8BEC-523DC89705A6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "unit", "unit", "{2BA83DD6-C344-4E18-9B9D-D8022C06B42D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayOne.Tests.Unit", "tests\unit\DayOne.Tests.Unit\DayOne.Tests.Unit.csproj", "{E61FCDCE-77EF-48C7-A2E1-A6F2A7EF9149}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA23EBCC-F8AA-4176-8FFF-41A488EB9E55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA23EBCC-F8AA-4176-8FFF-41A488EB9E55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA23EBCC-F8AA-4176-8FFF-41A488EB9E55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA23EBCC-F8AA-4176-8FFF-41A488EB9E55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7F66047-A88B-4266-8BEC-523DC89705A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7F66047-A88B-4266-8BEC-523DC89705A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7F66047-A88B-4266-8BEC-523DC89705A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7F66047-A88B-4266-8BEC-523DC89705A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E61FCDCE-77EF-48C7-A2E1-A6F2A7EF9149}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E61FCDCE-77EF-48C7-A2E1-A6F2A7EF9149}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E61FCDCE-77EF-48C7-A2E1-A6F2A7EF9149}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E61FCDCE-77EF-48C7-A2E1-A6F2A7EF9149}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DA23EBCC-F8AA-4176-8FFF-41A488EB9E55} = {370DF490-AA80-48D5-BBFB-C8FC81C626DA}
+		{8E326F26-C854-4E51-A66B-140CAAA05417} = {D81C9A65-19B7-40A7-A8AE-4D59A1035647}
+		{A7F66047-A88B-4266-8BEC-523DC89705A6} = {8E326F26-C854-4E51-A66B-140CAAA05417}
+		{2BA83DD6-C344-4E18-9B9D-D8022C06B42D} = {D81C9A65-19B7-40A7-A8AE-4D59A1035647}
+		{E61FCDCE-77EF-48C7-A2E1-A6F2A7EF9149} = {2BA83DD6-C344-4E18-9B9D-D8022C06B42D}
+	EndGlobalSection
+EndGlobal
