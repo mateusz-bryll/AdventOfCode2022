@@ -46,5 +46,10 @@ Following the Elf's instructions for the second column, what would your total sc
 | CalculateTotalScoreForResultStrategy_TestData |  28.71 us | 0.366 us | 0.343 us |  1.0071 | 0.0305 |   8.25 KB |
 |       CalculateTotalScoreForStrategy_RealData | 144.61 us | 1.613 us | 1.509 us | 10.7422 | 0.2441 |  87.88 KB |
 | CalculateTotalScoreForResultStrategy_RealData | 163.73 us | 1.673 us | 1.483 us | 10.7422 | 0.2441 |  87.93 KB |
-
 ### MacOS (Macbook Pro (2021) M1 Pro, 32GB RAM) 
+|                                        Method |      Mean |    Error |   StdDev |    Gen0 |   Gen1 | Allocated |
+|---------------------------------------------- |----------:|---------:|---------:|--------:|-------:|----------:|
+|       CalculateTotalScoreForStrategy_TestData |  26.60 us | 0.142 us | 0.133 us |  1.4648 | 0.0305 |   9.05 KB |
+| CalculateTotalScoreForResultStrategy_TestData |  26.03 us | 0.427 us | 0.400 us |  1.4648 | 0.0305 |    9.1 KB |
+|       CalculateTotalScoreForStrategy_RealData | 144.31 us | 1.893 us | 1.771 us | 14.4043 | 0.2441 |  88.72 KB |
+| CalculateTotalScoreForResultStrategy_RealData | 177.69 us | 0.502 us | 0.420 us | 14.4043 | 0.2441 |  88.77 KB |
