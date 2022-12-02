@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <LangVersion>11</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <InternalsVisibleTo Include="DayTwo.Tests.Unit" />
+      <InternalsVisibleTo Include="DayTwo.Tests.Benchmarks" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="input" />
+      <Content Include="input">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
+</Project>
