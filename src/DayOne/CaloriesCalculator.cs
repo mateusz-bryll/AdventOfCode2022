@@ -1,25 +1,25 @@
 namespace DayOne;
 
-internal readonly record struct ElfCalories(int Id, int Calories);
+public readonly record struct ElfCalories(int Id, int Calories);
 
-internal static class CaloriesCalculator
+public static class CaloriesCalculator
 {
-    public static ElfCalories FindElfCarryingMostCalories(string inputFilePath) =>
-        GetTotalCaloriesForEachElf(inputFilePath).MaxBy(elf => elf.Calories);
+    public static ElfCalories FindElfCarryingMostCalories(IEnumerable<string> caloriesList) =>
+        GetTotalCaloriesForEachElf(caloriesList).MaxBy(elf => elf.Calories);
 
-    public static int CalculateHowManyCaloriesTopThreeElvesCarryingInTotal(string inputFilePath) =>
-        GetTotalCaloriesForEachElf(inputFilePath)
+    public static int CalculateHowManyCaloriesTopThreeElvesCarryingInTotal(IEnumerable<string> caloriesList) =>
+        GetTotalCaloriesForEachElf(caloriesList)
             .OrderByDescending(elf => elf.Calories)
             .Take(3)
             .Sum(elf => elf.Calories);
 
-    private static IEnumerable<ElfCalories> GetTotalCaloriesForEachElf(string inputFilePath)
+    private static IEnumerable<ElfCalories> GetTotalCaloriesForEachElf(IEnumerable<string> caloriesList)
     {
         var id = 1;
         var totalCalories = 0;
-        foreach(var line in File.ReadLines(inputFilePath))
+        foreach(var caloriesListItem in caloriesList)
         {
-            if (int.TryParse(line, out var calories))
+            if (int.TryParse(caloriesListItem, out var calories))
             {
                 totalCalories += calories;
             }

@@ -9,7 +9,9 @@ public class RockPaperScissorsStrategyEvaluatorTests
     [Fact]
     public void CalculateTotalScoreForStrategy_ShouldReturnCorrectAnswer_ForExampleData()
     {
-        var result = RockPaperScissorsStrategyEvaluator.CalculateTotalScoreForStrategy("./test");
+        var strategyMoves = File.ReadLines("./test");
+        
+        var result = RockPaperScissorsStrategyEvaluator.CalculateTotalScoreForStrategy(strategyMoves);
 
         result.Should().Be(15);
     }
@@ -17,7 +19,9 @@ public class RockPaperScissorsStrategyEvaluatorTests
     [Fact]
     public void GetAllRoundResultsFromStrategyFile_ShouldReturnCorrectAnswer_ForExampleData()
     {
-        var result = RockPaperScissorsStrategyEvaluator.CalculateTotalScoreForResultStrategy("./test");
+        var strategyMoves = File.ReadLines("./test");
+        
+        var result = RockPaperScissorsStrategyEvaluator.CalculateTotalScoreForResultStrategy(strategyMoves);
 
         result.Should().Be(12);
     }

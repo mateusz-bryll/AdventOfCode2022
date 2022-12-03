@@ -40,12 +40,12 @@ Following the Elf's instructions for the second column, what would your total sc
 
 ## Results
 ### Windows (i9 9900K, 64GB RAM) 
-|                                        Method |      Mean |    Error |   StdDev |    Gen0 |   Gen1 | Allocated |
-|---------------------------------------------- |----------:|---------:|---------:|--------:|-------:|----------:|
-|       CalculateTotalScoreForStrategy_TestData |  28.35 us | 0.475 us | 0.444 us |  0.9766 |      - |    8.2 KB |
-| CalculateTotalScoreForResultStrategy_TestData |  28.71 us | 0.366 us | 0.343 us |  1.0071 | 0.0305 |   8.25 KB |
-|       CalculateTotalScoreForStrategy_RealData | 144.61 us | 1.613 us | 1.509 us | 10.7422 | 0.2441 |  87.88 KB |
-| CalculateTotalScoreForResultStrategy_RealData | 163.73 us | 1.673 us | 1.483 us | 10.7422 | 0.2441 |  87.93 KB |
+| Method                               | StrategyMoves |         Mean |        Error |     StdDev |   Gen0 | Allocated |
+|--------------------------------------|---------------|-------------:|-------------:|-----------:|-------:|----------:|
+| CalculateTotalScoreForStrategy       | String[2500]  | 67,180.79 ns |   778.323 ns | 728.044 ns |      - |      88 B |
+| CalculateTotalScoreForResultStrategy | String[2500]  | 87,612.31 ns | 1,040.525 ns | 922.399 ns |      - |     144 B |
+| CalculateTotalScoreForStrategy       | String[3]     |     72.83 ns |     0.545 ns |   0.483 ns | 0.0105 |      88 B |
+| CalculateTotalScoreForResultStrategy | String[3]     |    126.56 ns |     2.521 ns |   3.001 ns | 0.0172 |     144 B |
 ### MacOS (Macbook Pro (2021) M1 Pro, 32GB RAM) 
 |                                        Method |      Mean |    Error |   StdDev |    Gen0 |   Gen1 | Allocated |
 |---------------------------------------------- |----------:|---------:|---------:|--------:|-------:|----------:|

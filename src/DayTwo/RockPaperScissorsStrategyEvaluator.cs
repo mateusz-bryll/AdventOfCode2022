@@ -49,18 +49,18 @@ internal readonly record struct RoundResult(Move OpponentMove, Result ExpectedRe
 
 public class RockPaperScissorsStrategyEvaluator
 {
-    public static int CalculateTotalScoreForStrategy(string strategyFilePath) =>
-        GetAllRoundsFromStrategyFile(strategyFilePath).Sum(round => round.CalculateRoundScore());
+    public static int CalculateTotalScoreForStrategy(IEnumerable<string> strategyMoves) =>
+        GetAllRoundsFromStrategyFile(strategyMoves).Sum(round => round.CalculateRoundScore());
     
-    public static int CalculateTotalScoreForResultStrategy(string strategyFilePath) =>
-        GetAllRoundResultsFromStrategyFile(strategyFilePath)
+    public static int CalculateTotalScoreForResultStrategy(IEnumerable<string> strategyMoves) =>
+        GetAllRoundResultsFromStrategyFile(strategyMoves)
             .Select(roundResult => roundResult.CreateRound())
             .Sum(round => round.CalculateRoundScore());
 
-    private static IEnumerable<Round> GetAllRoundsFromStrategyFile(string strategyFilePath)
+    private static IEnumerable<Round> GetAllRoundsFromStrategyFile(IEnumerable<string> strategyMoves)
     {
-        foreach (var line in File.ReadLines(strategyFilePath))
-            yield return new Round(MapToMove(line[0]), MapToMove(line[2]));
+        foreach (var move in strategyMoves)
+            yield return new Round(MapToMove(move[0]), MapToMove(move[2]));
 
         Move MapToMove(char move) =>
             move switch
@@ -75,10 +75,10 @@ public class RockPaperScissorsStrategyEvaluator
             };
     }
     
-    private static IEnumerable<RoundResult> GetAllRoundResultsFromStrategyFile(string strategyFilePath)
+    private static IEnumerable<RoundResult> GetAllRoundResultsFromStrategyFile(IEnumerable<string> strategyMoves)
     {
-        foreach (var line in File.ReadLines(strategyFilePath))
-            yield return new RoundResult(MapToMove(line[0]), MapToResult(line[2]));
+        foreach (var move in strategyMoves)
+            yield return new RoundResult(MapToMove(move[0]), MapToResult(move[2]));
 
         Move MapToMove(char move) =>
             move switch

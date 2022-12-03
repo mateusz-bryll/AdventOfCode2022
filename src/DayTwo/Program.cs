@@ -1,4 +1,6 @@
 ﻿using DayTwo;
 
-Console.WriteLine($"Part 1 answer: {RockPaperScissorsStrategyEvaluator.CalculateTotalScoreForStrategy("./input")}");
-Console.WriteLine($"Part 2 answer: {RockPaperScissorsStrategyEvaluator.CalculateTotalScoreForResultStrategy("./input")}");
+var strategyMoves = File.ReadLines("./input");
+
+Console.WriteLine($"Part 1 answer: {RockPaperScissorsStrategyEvaluator.CalculateTotalScoreForStrategy(strategyMoves)}");
+Console.WriteLine($"Part 2 answer: {RockPaperScissorsStrategyEvaluator.CalculateTotalScoreForResultStrategy(strategyMoves)}");

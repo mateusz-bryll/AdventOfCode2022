@@ -7,27 +7,24 @@ BenchmarkRunner.Run<Benchmarks>();
 [MemoryDiagnoser]
 public class Benchmarks
 {
+    [ParamsSource(nameof(Data))]
+    public IEnumerable<string> CaloriesList { get; set; }
+    
     [Benchmark]
-    public object FindElfCarryingMostCalories_TestData()
+    public ElfCalories FindElfCarryingMostCalories()
     {
-        return CaloriesCalculator.FindElfCarryingMostCalories("./test");
+        return CaloriesCalculator.FindElfCarryingMostCalories(CaloriesList);
     }
     
     [Benchmark]
-    public object CalculateHowManyCaloriesTopThreeElvesCarryingInTotal_TestData()
+    public int CalculateHowManyCaloriesTopThreeElvesCarryingInTotal()
     {
-        return CaloriesCalculator.CalculateHowManyCaloriesTopThreeElvesCarryingInTotal("./test");
+        return CaloriesCalculator.CalculateHowManyCaloriesTopThreeElvesCarryingInTotal(CaloriesList);
     }
-    
-    [Benchmark]
-    public object FindElfCarryingMostCalories_RealData()
+
+    public IEnumerable<IEnumerable<string>> Data => new[]
     {
-        return CaloriesCalculator.FindElfCarryingMostCalories("./input");
-    }
-    
-    [Benchmark]
-    public object CalculateHowManyCaloriesTopThreeElvesCarryingInTotal_RealData()
-    {
-        return CaloriesCalculator.CalculateHowManyCaloriesTopThreeElvesCarryingInTotal("./input");
-    }
+        File.ReadLines("./input").ToArray(),
+        File.ReadLines("./test").ToArray()
+    };
 }

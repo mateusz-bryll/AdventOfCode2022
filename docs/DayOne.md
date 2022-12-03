@@ -44,12 +44,13 @@ Find the top three Elves carrying the most Calories. How many Calories are those
 
 ## Results
 ### Windows (i9 9900K, 64GB RAM)
-|                                                       Method |      Mean |    Error |   StdDev |   Gen0 |   Gen1 | Allocated |
-|------------------------------------------------------------- |----------:|---------:|---------:|-------:|-------:|----------:|
-|                         FindElfCarryingMostCalories_TestData |  32.66 us | 0.419 us | 0.350 us | 0.9766 |      - |   8.21 KB |
-| CalculateHowManyCaloriesTopThreeElvesCarryingInTotal_TestData |  33.31 us | 0.540 us | 0.451 us | 1.0376 |      - |   8.66 KB |
-|                         FindElfCarryingMostCalories_RealData | 114.21 us | 1.360 us | 1.272 us | 8.7891 | 0.2441 |  72.38 KB |
-| CalculateHowManyCaloriesTopThreeElvesCarryingInTotal_RealData | 119.34 us | 1.808 us | 1.602 us | 9.5215 | 0.3662 |  78.66 KB |
+| Method                                               | CaloriesList |        Mean |     Error |    StdDev |   Gen0 | Allocated |
+|------------------------------------------------------|--------------|------------:|----------:|----------:|-------:|----------:|
+| FindElfCarryingMostCalories                          | String[15]   |    273.3 ns |   4.15 ns |   3.88 ns | 0.0114 |      96 B |
+| CalculateHowManyCaloriesTopThreeElvesCarryingInTotal | String[15]   |    444.0 ns |   7.98 ns |   7.46 ns | 0.0658 |     552 B |
+| FindElfCarryingMostCalories                          | String[2245] | 36,977.8 ns | 229.49 ns | 191.64 ns |      - |      96 B |
+| CalculateHowManyCaloriesTopThreeElvesCarryingInTotal | String[2245] | 41,104.6 ns | 511.49 ns | 453.42 ns | 0.7324 |    6528 B |
+
 ### MacOS (Macbook Pro (2021) M1 Pro, 32GB RAM)
 |                                                       Method |     Mean |    Error |   StdDev |    Gen0 |   Gen1 | Allocated |
 |------------------------------------------------------------- |---------:|---------:|---------:|--------:|-------:|----------:|
@@ -57,3 +58,4 @@ Find the top three Elves carrying the most Calories. How many Calories are those
 | CalculateHowManyCaloriesTopThreeElvesCarryingInTotal_TestData | 25.48 us | 0.091 us | 0.081 us |  1.5259 | 0.0305 |   9.51 KB |
 |                         FindElfCarryingMostCalories_RealData | 84.66 us | 0.377 us | 0.315 us | 11.8408 | 0.2441 |  73.23 KB |
 | CalculateHowManyCaloriesTopThreeElvesCarryingInTotal_RealData | 87.53 us | 0.259 us | 0.242 us | 12.9395 | 0.4883 |  79.51 KB |
+

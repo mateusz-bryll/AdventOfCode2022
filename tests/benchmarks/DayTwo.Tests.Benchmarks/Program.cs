@@ -7,27 +7,24 @@ BenchmarkRunner.Run<Benchmarks>();
 [MemoryDiagnoser]
 public class Benchmarks
 {
+    [ParamsSource(nameof(Data))]
+    public IEnumerable<string> StrategyMoves { get; set; }
+    
     [Benchmark]
-    public int CalculateTotalScoreForStrategy_TestData()
+    public int CalculateTotalScoreForStrategy()
     {
-        return RockPaperScissorsStrategyEvaluator.CalculateTotalScoreForStrategy("./test");
+        return RockPaperScissorsStrategyEvaluator.CalculateTotalScoreForStrategy(StrategyMoves);
     }
     
     [Benchmark]
-    public int CalculateTotalScoreForResultStrategy_TestData()
+    public int CalculateTotalScoreForResultStrategy()
     {
-        return RockPaperScissorsStrategyEvaluator.CalculateTotalScoreForResultStrategy("./test");
+        return RockPaperScissorsStrategyEvaluator.CalculateTotalScoreForResultStrategy(StrategyMoves);
     }
     
-    [Benchmark]
-    public int CalculateTotalScoreForStrategy_RealData()
+    public IEnumerable<IEnumerable<string>> Data => new[]
     {
-        return RockPaperScissorsStrategyEvaluator.CalculateTotalScoreForStrategy("./input");
-    }
-    
-    [Benchmark]
-    public int CalculateTotalScoreForResultStrategy_RealData()
-    {
-        return RockPaperScissorsStrategyEvaluator.CalculateTotalScoreForResultStrategy("./input");
-    }
+        File.ReadLines("./input").ToArray(),
+        File.ReadLines("./test").ToArray()
+    };
 }
