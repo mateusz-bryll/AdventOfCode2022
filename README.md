@@ -7,6 +7,7 @@ Repository with solutions for Advent of Code 2022.
 ## Tasks
 * [Day 1: Calorie Counting](./docs/DayOne.md)
 * [Day 2: Rock Paper Scissors](./docs/DayTwo.md)
+* [Day 2: Rucksack Reorganization](./docs/DayThree.md)
 
 ## Structure
 * Every task has a dedicated .NET 7.0 project in the `src` directory.
