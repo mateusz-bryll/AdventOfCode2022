@@ -14,9 +14,9 @@ public class CaloriesCalculatorTests
     }
     
     [Fact]
-    public void CalculateHowManyCaloriesTopThreeElfsCarryingInTotal_ShouldReturnCorrectAnswer_ForExampleData()
+    public void CalculateHowManyCaloriesTopThreeElvesCarryingInTotal_ShouldReturnCorrectAnswer_ForExampleData()
     {
-        var result = CaloriesCalculator.CalculateHowManyCaloriesTopThreeElfsCarryingInTotal("./test");
+        var result = CaloriesCalculator.CalculateHowManyCaloriesTopThreeElvesCarryingInTotal("./test");
 
         result.Should().Be(45_000);
     }

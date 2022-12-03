@@ -47,13 +47,13 @@ Find the top three Elves carrying the most Calories. How many Calories are those
 |                                                       Method |      Mean |    Error |   StdDev |   Gen0 |   Gen1 | Allocated |
 |------------------------------------------------------------- |----------:|---------:|---------:|-------:|-------:|----------:|
 |                         FindElfCarryingMostCalories_TestData |  32.66 us | 0.419 us | 0.350 us | 0.9766 |      - |   8.21 KB |
-| CalculateHowManyCaloriesTopThreeElfsCarryingInTotal_TestData |  33.31 us | 0.540 us | 0.451 us | 1.0376 |      - |   8.66 KB |
+| CalculateHowManyCaloriesTopThreeElvesCarryingInTotal_TestData |  33.31 us | 0.540 us | 0.451 us | 1.0376 |      - |   8.66 KB |
 |                         FindElfCarryingMostCalories_RealData | 114.21 us | 1.360 us | 1.272 us | 8.7891 | 0.2441 |  72.38 KB |
-| CalculateHowManyCaloriesTopThreeElfsCarryingInTotal_RealData | 119.34 us | 1.808 us | 1.602 us | 9.5215 | 0.3662 |  78.66 KB |
+| CalculateHowManyCaloriesTopThreeElvesCarryingInTotal_RealData | 119.34 us | 1.808 us | 1.602 us | 9.5215 | 0.3662 |  78.66 KB |
 ### MacOS (Macbook Pro (2021) M1 Pro, 32GB RAM)
 |                                                       Method |     Mean |    Error |   StdDev |    Gen0 |   Gen1 | Allocated |
 |------------------------------------------------------------- |---------:|---------:|---------:|--------:|-------:|----------:|
 |                         FindElfCarryingMostCalories_TestData | 25.44 us | 0.145 us | 0.135 us |  1.4648 | 0.0305 |   9.06 KB |
-| CalculateHowManyCaloriesTopThreeElfsCarryingInTotal_TestData | 25.48 us | 0.091 us | 0.081 us |  1.5259 | 0.0305 |   9.51 KB |
+| CalculateHowManyCaloriesTopThreeElvesCarryingInTotal_TestData | 25.48 us | 0.091 us | 0.081 us |  1.5259 | 0.0305 |   9.51 KB |
 |                         FindElfCarryingMostCalories_RealData | 84.66 us | 0.377 us | 0.315 us | 11.8408 | 0.2441 |  73.23 KB |
-| CalculateHowManyCaloriesTopThreeElfsCarryingInTotal_RealData | 87.53 us | 0.259 us | 0.242 us | 12.9395 | 0.4883 |  79.51 KB |
+| CalculateHowManyCaloriesTopThreeElvesCarryingInTotal_RealData | 87.53 us | 0.259 us | 0.242 us | 12.9395 | 0.4883 |  79.51 KB |

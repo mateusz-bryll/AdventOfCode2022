@@ -7,7 +7,7 @@ internal static class CaloriesCalculator
     public static ElfCalories FindElfCarryingMostCalories(string inputFilePath) =>
         GetTotalCaloriesForEachElf(inputFilePath).MaxBy(elf => elf.Calories);
 
-    public static int CalculateHowManyCaloriesTopThreeElfsCarryingInTotal(string inputFilePath) =>
+    public static int CalculateHowManyCaloriesTopThreeElvesCarryingInTotal(string inputFilePath) =>
         GetTotalCaloriesForEachElf(inputFilePath)
             .OrderByDescending(elf => elf.Calories)
             .Take(3)

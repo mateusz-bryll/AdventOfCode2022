@@ -14,9 +14,9 @@ public class Benchmarks
     }
     
     [Benchmark]
-    public object CalculateHowManyCaloriesTopThreeElfsCarryingInTotal_TestData()
+    public object CalculateHowManyCaloriesTopThreeElvesCarryingInTotal_TestData()
     {
-        return CaloriesCalculator.CalculateHowManyCaloriesTopThreeElfsCarryingInTotal("./test");
+        return CaloriesCalculator.CalculateHowManyCaloriesTopThreeElvesCarryingInTotal("./test");
     }
     
     [Benchmark]
@@ -26,8 +26,8 @@ public class Benchmarks
     }
     
     [Benchmark]
-    public object CalculateHowManyCaloriesTopThreeElfsCarryingInTotal_RealData()
+    public object CalculateHowManyCaloriesTopThreeElvesCarryingInTotal_RealData()
     {
-        return CaloriesCalculator.CalculateHowManyCaloriesTopThreeElfsCarryingInTotal("./input");
+        return CaloriesCalculator.CalculateHowManyCaloriesTopThreeElvesCarryingInTotal("./input");
     }
 }
