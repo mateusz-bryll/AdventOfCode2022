@@ -2,7 +2,74 @@
 Repository with solutions for Advent of Code 2022 - https://adventofcode.com/2022.
 
 ## My progress
-### ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ 
+<table>
+  <tbody>
+    <tr>
+      <th rowspan="2">&nbsp</th>
+      <th colspan="25">Collected ⭐s</th>
+    </tr>
+    <tr>
+      <td>01</td><td>02</td><td>03</td><td>04</td><td>05</td><td>06</td><td>07</td><td>08</td><td>09</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td>
+    </tr>
+    <tr>
+      <td>Basic</td>
+      <td>⭐</td>
+      <td>⭐</td>
+      <td>⭐</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+    </tr>
+    <tr>
+      <td>Advanced</td>
+      <td>⭐</td>
+      <td>⭐</td>
+      <td>⭐</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+      <td>★</td>
+    </tr>
+  </tbody>
+</table>
+
 
 Santa's reindeer typically eat regular reindeer food, but they need a lot of magical energy to deliver presents on Christmas. For that, their favorite snack is a special type of ⭐ fruit that only grows deep in the jungle. The Elves have brought you on their annual expedition to the grove where the fruit grows.
 
