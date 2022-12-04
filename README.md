@@ -32,11 +32,18 @@ Collect ⭐s by solving puzzles. Two puzzles will be made available on each day 
 ### Install .NET Core
 Go to: https://dot.net and download the latest version
 
-### Run project
+### Run all tasks
 Use your terminal of choice and run:
 ```bash
 cd src/Runner
 dotnet run
+```
+
+### Run tasks from day
+Use your terminal of choice and run:
+```bash
+cd src/Runner
+dotnet run -- run-tasks -d <day_number>
 ```
 
 ### Run tests
