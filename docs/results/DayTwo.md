@@ -8,10 +8,9 @@
 | Advanced | String[3]          |    138.47 ns |     1.777 ns |     1.662 ns | 0.0172 |     144 B |
 
 ### MacOS (Macbook Pro (2021) M1 Pro, 32GB RAM) 
-| Method                               | StrategyMoves |         Mean |      Error |     StdDev |   Gen0 | Allocated |
-|--------------------------------------|---------------|-------------:|-----------:|-----------:|-------:|----------:|
-| CalculateTotalScoreForStrategy       | String[2500]  | 64,058.79 ns | 208.931 ns | 195.434 ns |      - |      88 B |
-| CalculateTotalScoreForResultStrategy | String[2500]  | 94,498.71 ns | 302.605 ns | 283.057 ns |      - |     144 B |
-| CalculateTotalScoreForStrategy       | String[3]     |     67.98 ns |   0.126 ns |   0.118 ns | 0.0139 |      88 B |
-| CalculateTotalScoreForResultStrategy | String[3]     |    140.19 ns |   0.746 ns |   0.698 ns | 0.0229 |     144 B |
-
+| Method   | BenchmarkInputData |         Mean |      Error |     StdDev |   Gen0 |   Gen1 | Allocated |
+|----------|--------------------|-------------:|-----------:|-----------:|-------:|-------:|----------:|
+| Basic    | String[2500]       | 64,044.04 ns | 197.682 ns | 175.240 ns |      - |      - |      88 B |
+| Advanced | String[2500]       | 94,625.29 ns | 371.935 ns | 347.908 ns |      - |      - |     144 B |
+| Basic    | String[3]          |     68.69 ns |   0.295 ns |   0.276 ns | 0.0139 | 0.0001 |      88 B |
+| Advanced | String[3]          |    140.85 ns |   0.388 ns |   0.363 ns | 0.0229 | 0.0002 |     144 B |

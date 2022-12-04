@@ -8,9 +8,9 @@
 | Advanced | String[6]          |   2,834.7 ns |    45.77 ns |    42.82 ns | 0.1259 |    1080 B |
 
 ### MacOS (Macbook Pro (2021) M1 Pro, 32GB RAM)
-| Method                                                  | EncodedRucksacks |         Mean |     Error |    StdDev |   Gen0 |   Gen1 | Allocated |
-|---------------------------------------------------------|------------------|-------------:|----------:|----------:|-------:|-------:|----------:|
-| CalculateSumOfPrioritiesForEncodedRucksacks             | String[300]      |  16,415.0 ns | 113.66 ns | 106.32 ns |      - |      - |      32 B |
-| CalculateSumOfPrioritiesOfBadgeItemsForEncodedRucksacks | String[300]      | 137,160.7 ns | 817.95 ns | 725.09 ns | 5.8594 | 0.2441 |   36776 B |
-| CalculateSumOfPrioritiesForEncodedRucksacks             | String[6]        |     181.4 ns |   0.38 ns |   0.35 ns | 0.0050 |      - |      32 B |
-| CalculateSumOfPrioritiesOfBadgeItemsForEncodedRucksacks | String[6]        |   1,569.9 ns |   3.03 ns |   2.84 ns | 0.1717 |      - |    1080 B |
+| Method   | BenchmarkInputData |         Mean |     Error |    StdDev |   Gen0 |   Gen1 | Allocated |
+|----------|--------------------|-------------:|----------:|----------:|-------:|-------:|----------:|
+| Basic    | String[300]        |  16,496.6 ns |  71.29 ns |  66.69 ns |      - |      - |      32 B |
+| Advanced | String[300]        | 137,253.5 ns | 485.50 ns | 430.39 ns | 5.8594 | 0.2441 |   36776 B |
+| Basic    | String[6]          |     183.4 ns |   0.61 ns |   0.57 ns | 0.0050 | 0.0002 |      32 B |
+| Advanced | String[6]          |   1,578.1 ns |   2.65 ns |   2.35 ns | 0.1717 | 0.0019 |    1080 B |

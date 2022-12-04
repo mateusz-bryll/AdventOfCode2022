@@ -8,3 +8,9 @@
 | Advanced | String[6]          |    415.0 ns |     4.38 ns |     4.09 ns | 0.0038 |      32 B |
 
 ### MacOS (Macbook Pro (2021) M1 Pro, 32GB RAM)
+| Method   | BenchmarkInputData |        Mean |     Error |    StdDev |   Gen0 |   Gen1 | Allocated |
+|----------|--------------------|------------:|----------:|----------:|-------:|-------:|----------:|
+| Basic    | String[1000]       | 53,564.1 ns | 159.70 ns | 149.38 ns |      - |      - |      32 B |
+| Advanced | String[1000]       | 50,168.0 ns |  98.39 ns |  92.03 ns |      - |      - |      32 B |
+| Basic    | String[6]          |    259.3 ns |   1.14 ns |   1.06 ns | 0.0048 | 0.0005 |      32 B |
+| Advanced | String[6]          |    281.6 ns |   1.88 ns |   1.75 ns | 0.0048 | 0.0005 |      32 B |
