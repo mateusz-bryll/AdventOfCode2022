@@ -23,24 +23,44 @@ Collect ⭐s by solving puzzles. Two puzzles will be made available on each day 
 
 ## 📂 Structure
 * Every task has a dedicated .NET 7.0 project in the `src` directory.
-* For every project in the `src` directory there is a dedicated test project in the `tests` folder.
-* Every project is named based on the day in the calendar, ex. `DayOne`, `DayTwo`, etc.
-* Name of every test project has a name of the task project with `.Tests.Unit` suffix.
-* Name of every benchmark project has a name of the task project with `.Tests.Benchmarks` suffix.
+* There is a special project `Runner` (Console application) to run any daily tasks or benchmarks.
+* For every project with daily tasks in the `src` directory there is a dedicated test project in the `tests/unit` and `test/benchmarks` folders.
+* Every project name is based on the day in the calendar, ex. `DayOne`, `DayTwo`, etc.
+* Name of every unit tests project is based on the tasks project name with the `.Tests.Unit` suffix.
+* Name of every benchmark test project is based on the tasks project name with the `.Tests.Benchmarks` suffix.
+
+```
+📂 AdventOfCode/
+├─ 📕 deps/
+|     Utils and helpers libraries
+├─ 📓 docs/
+│  ├─ 🖼️ assets/
+|  |     Static content like pictures for documentation
+│  ├─ 📈 results/
+|  |     Benchmarks results
+│  ├─ ☑️ tasks/
+|  |     Tasks descrioptions
+├─ 📘 src/
+│  ├─ ⚙️ Runner/
+│  ├─ ✅ Day<Number>/
+├─ 📗 tests/
+│  ├─ 🚀 benchmarks/
+|  |  ├─ ⚙️ Day<Number>.Tests.Benchmarks/
+|  ├─ 🧪 unit/
+|  |  ├─ ⚙️ Day<Number>.Tests.Unit/
+```
 
 ## 🛠 Usage
 ### Install .NET Core
 Go to: https://dot.net and download the latest version
 
 ### Run all tasks
-Use your terminal of choice and run:
 ```bash
 cd src/Runner
 dotnet run
 ```
 
 ### Run tasks from day
-Use your terminal of choice and run:
 ```bash
 cd src/Runner
 dotnet run -- run-tasks -d <day_number>
@@ -57,10 +77,10 @@ cd src/Runner
 dotnet run -c Release -- run-benchmark -d <day_number>
 ```
 
-## 🧙 Wants more?
+## 📜 Wants more?
 Check out my colleagues repositories, who are also taking part in this year AoC.
 - [Lidjan](https://github.com/minidmnv/aoc2022) (TypeScript)
 - [Raghval](https://gitlab.com/arturmlody/adventofcode) (C#)
 
-## 👦 Author
+## 🧙 Author
 Authored completely by Mateusz Bryll
