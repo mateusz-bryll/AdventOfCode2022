@@ -16,7 +16,7 @@ Repository with solutions for Advent of Code 2022 - https://adventofcode.com/202
       <td>⭐</td>
       <td>⭐</td>
       <td>⭐</td>
-      <td>★</td>
+      <td>⭐</td>
       <td>★</td>
       <td>★</td>
       <td>★</td>
@@ -44,7 +44,7 @@ Repository with solutions for Advent of Code 2022 - https://adventofcode.com/202
       <td>⭐</td>
       <td>⭐</td>
       <td>⭐</td>
-      <td>★</td>
+      <td>⭐</td>
       <td>★</td>
       <td>★</td>
       <td>★</td>
@@ -84,6 +84,7 @@ Collect ⭐s by solving puzzles. Two puzzles will be made available on each day 
 * [Day 1: Calorie Counting](./docs/DayOne.md)
 * [Day 2: Rock Paper Scissors](./docs/DayTwo.md)
 * [Day 3: Rucksack Reorganization](./docs/DayThree.md)
+* [Day 4: Camp Cleanup](./docs/DayFour.md)
 
 ## Structure
 * Every task has a dedicated .NET 7.0 project in the `src` directory.

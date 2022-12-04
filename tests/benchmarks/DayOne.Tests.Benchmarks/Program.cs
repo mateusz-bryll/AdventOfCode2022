@@ -8,7 +8,7 @@ BenchmarkRunner.Run<Benchmarks>();
 public class Benchmarks
 {
     [ParamsSource(nameof(Data))]
-    public IEnumerable<string> CaloriesList { get; set; }
+    public IEnumerable<string> CaloriesList { get; set; } = default!;
     
     [Benchmark]
     public ElfCalories FindElfCarryingMostCalories()

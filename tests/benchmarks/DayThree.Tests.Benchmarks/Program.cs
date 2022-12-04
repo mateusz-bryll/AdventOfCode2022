@@ -8,7 +8,7 @@ BenchmarkRunner.Run<Benchmarks>();
 public class Benchmarks
 {
     [ParamsSource(nameof(Data))]
-    public IEnumerable<string> EncodedRucksacks { get; set; }
+    public IEnumerable<string> EncodedRucksacks { get; set; } = default!;
     
     [Benchmark]
     public int CalculateSumOfPrioritiesForEncodedRucksacks()
