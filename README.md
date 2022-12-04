@@ -35,7 +35,7 @@ Go to: https://dot.net and download the latest version
 ### Run project
 Use your terminal of choice and run:
 ```bash
-cd src/<ProjectName> #ex. src/DayOne
+cd src/Runner
 dotnet run
 ```
 

@@ -1,28 +1,21 @@
-using System.IO;
+using AdventOfCode.UnitTests.Sdk;
 using FluentAssertions;
-using Xunit;
 
 namespace DayOne.Tests.Unit;
 
-public class CaloriesCalculatorTests
+public class CaloriesCalculatorTests : TestWithDataFor<DayOneTasks>
 {
-    [Fact]
-    public void FindElfCarryingMostCalories_ShouldReturnCorrectAnswer_ForExampleData()
+    public CaloriesCalculatorTests() : base(new DayOneTasks())
     {
-        var caloriesList = File.ReadLines("./test");
-        
-        var result = CaloriesCalculator.FindElfCarryingMostCalories(caloriesList);
-
-        result.Should().BeEquivalentTo(new ElfCalories(4, 24_000));
     }
-    
-    [Fact]
-    public void CalculateHowManyCaloriesTopThreeElvesCarryingInTotal_ShouldReturnCorrectAnswer_ForExampleData()
-    {
-        var caloriesList = File.ReadLines("./test");
-        
-        var result = CaloriesCalculator.CalculateHowManyCaloriesTopThreeElvesCarryingInTotal(caloriesList);
 
+    protected override void AssertGetBasicTaskResult(int result)
+    {
+        result.Should().Be(24_000);
+    }
+
+    protected override void AssertGetAdvancedTaskResult(int result)
+    {
         result.Should().Be(45_000);
     }
 }

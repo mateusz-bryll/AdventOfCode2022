@@ -1,28 +1,21 @@
-using Xunit;
-using DayTwo;
+using AdventOfCode.UnitTests.Sdk;
 using FluentAssertions;
 
 namespace DayTwo.Tests.Unit;
 
-public class RockPaperScissorsStrategyEvaluatorTests
+public class RockPaperScissorsStrategyEvaluatorTests : TestWithDataFor<DayTwoTasks>
 {
-    [Fact]
-    public void CalculateTotalScoreForStrategy_ShouldReturnCorrectAnswer_ForExampleData()
+    public RockPaperScissorsStrategyEvaluatorTests() : base(new DayTwoTasks())
     {
-        var strategyMoves = File.ReadLines("./test");
-        
-        var result = RockPaperScissorsStrategyEvaluator.CalculateTotalScoreForStrategy(strategyMoves);
+    }
 
+    protected override void AssertGetBasicTaskResult(int result)
+    {
         result.Should().Be(15);
     }
-    
-    [Fact]
-    public void GetAllRoundResultsFromStrategyFile_ShouldReturnCorrectAnswer_ForExampleData()
-    {
-        var strategyMoves = File.ReadLines("./test");
-        
-        var result = RockPaperScissorsStrategyEvaluator.CalculateTotalScoreForResultStrategy(strategyMoves);
 
+    protected override void AssertGetAdvancedTaskResult(int result)
+    {
         result.Should().Be(12);
     }
 }

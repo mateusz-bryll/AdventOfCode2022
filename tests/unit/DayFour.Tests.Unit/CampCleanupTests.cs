@@ -1,28 +1,21 @@
-using DayFour.Domain;
+using AdventOfCode.UnitTests.Sdk;
 using FluentAssertions;
-using Xunit;
 
 namespace DayFour.Tests.Unit;
 
-public class CampCleanupTests
+public class CampCleanupTests : TestWithDataFor<DayFourTasks>
 {
-    [Fact]
-    public void CountHowManyAssignmentPairsDoesOneRangeFullyContainTheOther_ShouldReturnTwo_ForTestData()
+    public CampCleanupTests() : base(new DayFourTasks())
     {
-        var assignmentStrings = File.ReadLines("./test");
+    }
 
-        var result = CampCleanup.CountHowManyAssignmentPairsDoesOneRangeFullyContainTheOther(assignmentStrings);
-
+    protected override void AssertGetBasicTaskResult(int result)
+    {
         result.Should().Be(2);
     }
-    
-    [Fact]
-    public void CountHowManyAssignmentPairsDoesOneRangeOverlapTheOther_ShouldReturnTwo_ForTestData()
+
+    protected override void AssertGetAdvancedTaskResult(int result)
     {
-        var assignmentStrings = File.ReadLines("./test");
-
-        var result = CampCleanup.CountHowManyAssignmentPairsDoesOneRangeOverlapTheOther(assignmentStrings);
-
         result.Should().Be(4);
     }
 }

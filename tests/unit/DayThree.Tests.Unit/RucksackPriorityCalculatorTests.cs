@@ -1,29 +1,21 @@
-using System.Text;
-using DayThree.Domain;
+using AdventOfCode.UnitTests.Sdk;
 using FluentAssertions;
-using Xunit;
 
 namespace DayThree.Tests.Unit;
 
-public class RucksackPriorityCalculatorTests
+public class RucksackPriorityCalculatorTests : TestWithDataFor<DayThreeTasks>
 {
-    [Fact]
-    public void CalculateSumOfPrioritiesForEncodedRucksacks_ReturnsCorrectSum_ForTestData()
+    public RucksackPriorityCalculatorTests() : base(new DayThreeTasks())
     {
-        var encodedRucksacks = File.ReadLines("./test", Encoding.UTF8);
-
-        var sum = RucksackPriorityCalculator.CalculateSumOfPrioritiesForEncodedRucksacks(encodedRucksacks);
-
-        sum.Should().Be(157);
     }
 
-    [Fact]
-    public void CalculateSumOfPrioritiesOfBadgeItemsForEncodedRucksacks_ReturnsCorrectSum_ForTestData()
+    protected override void AssertGetBasicTaskResult(int result)
     {
-        var encodedRucksacks = File.ReadLines("./test", Encoding.UTF8);
+        result.Should().Be(157);
+    }
 
-        var sum = RucksackPriorityCalculator.CalculateSumOfPrioritiesOfBadgeItemsForEncodedRucksacks(encodedRucksacks);
-
-        sum.Should().Be(70);
+    protected override void AssertGetAdvancedTaskResult(int result)
+    {
+        result.Should().Be(70);
     }
 }

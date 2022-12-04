@@ -1,7 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <OutputType>Exe</OutputType>
         <TargetFramework>net7.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
@@ -13,9 +12,13 @@
     </ItemGroup>
 
     <ItemGroup>
-      <None Remove="input" />
-      <Content Include="input">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <ProjectReference Include="..\..\deps\AdventOfCode.Tasks.Sdk\AdventOfCode.Tasks.Sdk.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="day-03.inputdata" />
+      <Content Include="day-03.inputdata">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
     </ItemGroup>
 

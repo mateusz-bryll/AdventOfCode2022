@@ -25,13 +25,18 @@
 
     <ItemGroup>
       <None Remove="test" />
-      <Content Include="test">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </Content>
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\..\deps\AdventOfCode.UnitTests.Sdk\AdventOfCode.UnitTests.Sdk.csproj" />
       <ProjectReference Include="..\..\..\src\DayOne\DayOne.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="day-01.testdata" />
+      <Content Include="day-01.testdata">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
     </ItemGroup>
 
 </Project>

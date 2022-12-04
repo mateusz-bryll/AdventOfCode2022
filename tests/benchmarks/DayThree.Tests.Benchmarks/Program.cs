@@ -25,7 +25,7 @@ public class Benchmarks
 
     public IEnumerable<IEnumerable<string>> Data => new[]
     {
-        File.ReadLines("./input").ToArray(),
-        File.ReadLines("./test").ToArray()
+        File.ReadLines("./day-03.inputdata").ToArray(),
+        File.ReadLines("./day-03.testdata").ToArray()
     };
 }
