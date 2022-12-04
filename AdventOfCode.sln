@@ -15,12 +15,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayOne", "src\DayOne\DayOne.csproj", "{DA23EBCC-F8AA-4176-8FFF-41A488EB9E55}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{40DF1A33-9995-49FA-970F-AE4991962E35}"
-	ProjectSection(SolutionItems) = preProject
-		docs\DayOne.md = docs\DayOne.md
-		docs\DayTwo.md = docs\DayTwo.md
-		docs\DayThree.md = docs\DayThree.md
-		docs\DayFour.md = docs\DayFour.md
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "benchmarks", "benchmarks", "{8E326F26-C854-4E51-A66B-140CAAA05417}"
 EndProject
@@ -47,6 +41,27 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayFour.Tests.Unit", "tests\unit\DayFour.Tests.Unit\DayFour.Tests.Unit.csproj", "{6768D7D7-F966-421C-BD79-BB70D61666EF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayFour.Tests.Benchmarks", "tests\benchmarks\DayFour.Tests.Benchmarks\DayFour.Tests.Benchmarks.csproj", "{D5C1D911-3AA7-418A-8CDD-920F5CAAC7F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tasks", "tasks", "{7703E83B-89F8-472F-8144-CA7BCC528038}"
+	ProjectSection(SolutionItems) = preProject
+		docs\tasks\DayFour.md = docs\tasks\DayFour.md
+		docs\tasks\DayOne.md = docs\tasks\DayOne.md
+		docs\tasks\DayThree.md = docs\tasks\DayThree.md
+		docs\tasks\DayTwo.md = docs\tasks\DayTwo.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "results", "results", "{28B3095E-5504-44FD-A721-1BE906F54330}"
+	ProjectSection(SolutionItems) = preProject
+		docs\results\DayFour.md = docs\results\DayFour.md
+		docs\results\DayOne.md = docs\results\DayOne.md
+		docs\results\DayThree.md = docs\results\DayThree.md
+		docs\results\DayTwo.md = docs\results\DayTwo.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{716776A1-4C0F-43FF-B2B1-194AAFCC5E0D}"
+	ProjectSection(SolutionItems) = preProject
+		docs\assets\calendar.png = docs\assets\calendar.png
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -118,5 +133,8 @@ Global
 		{FE2ECADF-5EB3-4029-B9A4-F878A81DDD44} = {370DF490-AA80-48D5-BBFB-C8FC81C626DA}
 		{6768D7D7-F966-421C-BD79-BB70D61666EF} = {2BA83DD6-C344-4E18-9B9D-D8022C06B42D}
 		{D5C1D911-3AA7-418A-8CDD-920F5CAAC7F9} = {8E326F26-C854-4E51-A66B-140CAAA05417}
+		{7703E83B-89F8-472F-8144-CA7BCC528038} = {40DF1A33-9995-49FA-970F-AE4991962E35}
+		{28B3095E-5504-44FD-A721-1BE906F54330} = {40DF1A33-9995-49FA-970F-AE4991962E35}
+		{716776A1-4C0F-43FF-B2B1-194AAFCC5E0D} = {40DF1A33-9995-49FA-970F-AE4991962E35}
 	EndGlobalSection
 EndGlobal
