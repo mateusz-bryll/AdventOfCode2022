@@ -1,11 +1,12 @@
 ## Results
 ### Windows (i9 9900K, 64GB RAM) 
-| Method                               | StrategyMoves |         Mean |        Error |     StdDev |   Gen0 | Allocated |
-|--------------------------------------|---------------|-------------:|-------------:|-----------:|-------:|----------:|
-| CalculateTotalScoreForStrategy       | String[2500]  | 67,180.79 ns |   778.323 ns | 728.044 ns |      - |      88 B |
-| CalculateTotalScoreForResultStrategy | String[2500]  | 87,612.31 ns | 1,040.525 ns | 922.399 ns |      - |     144 B |
-| CalculateTotalScoreForStrategy       | String[3]     |     72.83 ns |     0.545 ns |   0.483 ns | 0.0105 |      88 B |
-| CalculateTotalScoreForResultStrategy | String[3]     |    126.56 ns |     2.521 ns |   3.001 ns | 0.0172 |     144 B |
+| Method   | BenchmarkInputData |         Mean |        Error |       StdDev |   Gen0 | Allocated |
+|----------|--------------------|-------------:|-------------:|-------------:|-------:|----------:|
+| Basic    | String[2500]       | 68,081.59 ns |   966.541 ns |   904.103 ns |      - |      88 B |
+| Advanced | String[2500]       | 89,604.71 ns | 1,077.246 ns | 1,007.657 ns |      - |     144 B |
+| Basic    | String[3]          |     76.08 ns |     0.961 ns |     0.803 ns | 0.0105 |      88 B |
+| Advanced | String[3]          |    138.47 ns |     1.777 ns |     1.662 ns | 0.0172 |     144 B |
+
 ### MacOS (Macbook Pro (2021) M1 Pro, 32GB RAM) 
 | Method                               | StrategyMoves |         Mean |      Error |     StdDev |   Gen0 | Allocated |
 |--------------------------------------|---------------|-------------:|-----------:|-----------:|-------:|----------:|

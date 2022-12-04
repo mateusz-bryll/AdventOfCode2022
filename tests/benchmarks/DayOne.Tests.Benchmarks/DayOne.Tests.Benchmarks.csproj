@@ -1,7 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <OutputType>Exe</OutputType>
         <TargetFramework>net7.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
@@ -13,6 +12,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\..\deps\AdventOfCode.Benchmarks.Sdk\AdventOfCode.Benchmarks.Sdk.csproj" />
       <ProjectReference Include="..\..\..\src\DayOne\DayOne.csproj" />
       <ProjectReference Include="..\..\unit\DayOne.Tests.Unit\DayOne.Tests.Unit.csproj" />
     </ItemGroup>

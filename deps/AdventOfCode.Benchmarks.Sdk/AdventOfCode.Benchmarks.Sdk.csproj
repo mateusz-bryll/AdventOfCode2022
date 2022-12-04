@@ -7,9 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\..\deps\AdventOfCode.Benchmarks.Sdk\AdventOfCode.Benchmarks.Sdk.csproj" />
-      <ProjectReference Include="..\..\..\src\DayTwo\DayTwo.csproj" />
-      <ProjectReference Include="..\..\unit\DayTwo.Tests.Unit\DayTwo.Tests.Unit.csproj" />
+      <ProjectReference Include="..\AdventOfCode.Tasks.Sdk\AdventOfCode.Tasks.Sdk.csproj" />
     </ItemGroup>
 
     <ItemGroup>

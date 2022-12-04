@@ -6,7 +6,7 @@ using Runner.Utils.Commands;
 
 namespace Runner.Commands;
 
-[Verb("run-tasks", isDefault: false, HelpText = "Run all tasks for Advent of Code 2022")]
+[Verb("run-tasks", isDefault: false, HelpText = "Run tasks for specific day for Advent of Code 2022")]
 public class RunDayTasks : ICommand
 {
     [Option('d', "day", Required = true, HelpText = "Day number")]

@@ -1,13 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <OutputType>Exe</OutputType>
         <TargetFramework>net7.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\..\deps\AdventOfCode.Benchmarks.Sdk\AdventOfCode.Benchmarks.Sdk.csproj" />
       <ProjectReference Include="..\..\..\src\DayThree\DayThree.csproj" />
       <ProjectReference Include="..\..\unit\DayThree.Tests.Unit\DayThree.Tests.Unit.csproj" />
     </ItemGroup>

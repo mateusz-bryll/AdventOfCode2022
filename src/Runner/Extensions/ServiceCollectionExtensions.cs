@@ -1,3 +1,4 @@
+using AdventOfCode.Benchmarks.Sdk;
 using AdventOfCode.Tasks.Sdk;
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,6 +12,16 @@ public static class ServiceCollectionExtensions
     {
         services.Scan(source => source.FromApplicationDependencies()
             .AddClasses(c => c.AssignableTo<ITasks>())
+            .AsImplementedInterfaces()
+            .WithScopedLifetime());
+        
+        return services;
+    }
+    
+    public static IServiceCollection AddBenchmarks(this IServiceCollection services)
+    {
+        services.Scan(source => source.FromApplicationDependencies()
+            .AddClasses(c => c.AssignableTo<IBenchmark>())
             .AsImplementedInterfaces()
             .WithScopedLifetime());
         

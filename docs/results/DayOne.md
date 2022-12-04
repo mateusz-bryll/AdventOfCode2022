@@ -1,11 +1,12 @@
 ## Results
 ### Windows (i9 9900K, 64GB RAM)
-| Method                                               | CaloriesList |        Mean |     Error |    StdDev |   Gen0 | Allocated |
-|------------------------------------------------------|--------------|------------:|----------:|----------:|-------:|----------:|
-| FindElfCarryingMostCalories                          | String[15]   |    273.3 ns |   4.15 ns |   3.88 ns | 0.0114 |      96 B |
-| CalculateHowManyCaloriesTopThreeElvesCarryingInTotal | String[15]   |    444.0 ns |   7.98 ns |   7.46 ns | 0.0658 |     552 B |
-| FindElfCarryingMostCalories                          | String[2245] | 36,977.8 ns | 229.49 ns | 191.64 ns |      - |      96 B |
-| CalculateHowManyCaloriesTopThreeElvesCarryingInTotal | String[2245] | 41,104.6 ns | 511.49 ns | 453.42 ns | 0.7324 |    6528 B |
+| Method   | BenchmarkInputData |        Mean |     Error |    StdDev |   Gen0 | Allocated |
+|----------|--------------------|------------:|----------:|----------:|-------:|----------:|
+| Basic    | String[15]         |    287.4 ns |   5.78 ns |   8.65 ns | 0.0114 |      96 B |
+| Advanced | String[15]         |    438.2 ns |   5.75 ns |   5.37 ns | 0.0658 |     552 B |
+| Basic    | String[2245]       | 37,234.6 ns | 362.94 ns | 339.49 ns |      - |      96 B |
+| Advanced | String[2245]       | 41,325.4 ns | 655.05 ns | 580.69 ns | 0.7324 |    6528 B |
+
 
 ### MacOS (Macbook Pro (2021) M1 Pro, 32GB RAM)
 | Method                                               | CaloriesList |        Mean |    Error |   StdDev |   Gen0 | Allocated |

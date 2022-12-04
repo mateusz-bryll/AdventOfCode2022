@@ -10,6 +10,7 @@ ValidatorOptions.Global.LanguageManager.Culture = new CultureInfo("en");
 var servicesProvider = new ServiceCollection()
     .AddCommandBus()
     .AddTasks()
+    .AddBenchmarks()
     .BuildServiceProvider();
 
 using var scope = servicesProvider.CreateScope();

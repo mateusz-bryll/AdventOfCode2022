@@ -1,5 +1,5 @@
-# Advent of Code 2022 (C#)
-Repository with solutions for Advent of Code 2022 - https://adventofcode.com/2022.
+# 🎄 Advent of Code 2022 (C#) 🎅
+### Repository with solutions for Advent of Code 2022 - https://adventofcode.com/2022.
 
 Santa's reindeer typically eat regular reindeer food, but they need a lot of magical energy to deliver presents on Christmas. For that, their favorite snack is a special type of ⭐ fruit that only grows deep in the jungle. The Elves have brought you on their annual expedition to the grove where the fruit grows.
 
@@ -8,12 +8,12 @@ To supply enough magical energy, the expedition needs to retrieve a minimum of f
 Collect ⭐s by solving puzzles. Two puzzles will be made available on each day in the Advent calendar; the second puzzle is unlocked when you complete the first. Each puzzle grants one ⭐.
 
 
-## My progress
+## 🦌🦌 My progress 🦌🦌
 ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★
 
 ![Calendar](./docs/assets/calendar.png)
 
-## Tasks
+## ✔️ Tasks
 | Day | Task details                                        | Collected ⭐s | Benchmark results                        |
 |-----|-----------------------------------------------------|--------------|------------------------------------------|
 | 01  | [Calorie Counting](./docs/tasks/DayOne.md)          | ⭐ ⭐          | [Benchmarks](./docs/results/DayOne.md)   |
@@ -21,14 +21,14 @@ Collect ⭐s by solving puzzles. Two puzzles will be made available on each day 
 | 03  | [Rucksack Reorganization](./docs/tasks/DayThree.md) | ⭐ ⭐          | [Benchmarks](./docs/results/DayThree.md) |
 | 04  | [Camp Cleanup](./docs/tasks/DayFour.md)             | ⭐ ⭐          | [Benchmarks](./docs/results/DayFour.md)  |
 
-## Structure
+## 📂 Structure
 * Every task has a dedicated .NET 7.0 project in the `src` directory.
 * For every project in the `src` directory there is a dedicated test project in the `tests` folder.
 * Every project is named based on the day in the calendar, ex. `DayOne`, `DayTwo`, etc.
 * Name of every test project has a name of the task project with `.Tests.Unit` suffix.
 * Name of every benchmark project has a name of the task project with `.Tests.Benchmarks` suffix.
 
-## Usage
+## 🛠 Usage
 ### Install .NET Core
 Go to: https://dot.net and download the latest version
 
@@ -48,15 +48,19 @@ dotnet run -- run-tasks -d <day_number>
 
 ### Run tests
 ```bash
-cd tests/unit/<ProjectName>.Tests.Unit #ex. tests/unit/DayOne.Tests.Unit
 dotnet test
 ```
 
 ### Run benchmarks
 ```bash
-cd tests/benchmarks/<ProjectName>.Tests.Benchmarks #ex. tests/benchmarks/DayOne.Tests.Benchmarks
-dotnet run -c Release
+cd src/Runner
+dotnet run -c Release -- run-benchmark -d <day_number>
 ```
 
-## Author
+## 🧙 Wants more?
+Check out my colleagues repositories, who are also taking part in this year AoC.
+- [Lidjan](https://github.com/minidmnv/aoc2022) (TypeScript)
+- [Raghval](https://gitlab.com/arturmlody/adventofcode) (C#)
+
+## 👦 Author
 Authored completely by Mateusz Bryll
