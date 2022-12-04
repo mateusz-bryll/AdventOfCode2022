@@ -1,5 +1,5 @@
 # 🎄 Advent of Code 2022 (C#) 🎅
-### Repository with solutions for Advent of Code 2022 - https://adventofcode.com/2022.
+### Repository with solutions for [Advent of Code 2022](https://adventofcode.com/2022).
 
 Santa's reindeer typically eat regular reindeer food, but they need a lot of magical energy to deliver presents on Christmas. For that, their favorite snack is a special type of ⭐ fruit that only grows deep in the jungle. The Elves have brought you on their annual expedition to the grove where the fruit grows.
 
@@ -29,30 +29,38 @@ Collect ⭐s by solving puzzles. Two puzzles will be made available on each day 
 * Name of every unit tests project is based on the tasks project name with the `.Tests.Unit` suffix.
 * Name of every benchmark test project is based on the tasks project name with the `.Tests.Benchmarks` suffix.
 
-```
+```text
 📂 AdventOfCode/
+|
 ├─ 📕 deps/
 |     Utils and helpers libraries
+|
 ├─ 📓 docs/
 │  ├─ 🖼️ assets/
 |  |     Static content like pictures for documentation
 │  ├─ 📈 results/
 |  |     Benchmarks results
-│  ├─ ☑️ tasks/
-|  |     Tasks descrioptions
+│  └─ ☑️ tasks/
+|        Tasks descrioptions
+|
 ├─ 📘 src/
 │  ├─ ⚙️ Runner/
-│  ├─ ✅ Day<Number>/
-├─ 📗 tests/
-│  ├─ 🚀 benchmarks/
-|  |  ├─ ⚙️ Day<Number>.Tests.Benchmarks/
-|  ├─ 🧪 unit/
-|  |  ├─ ⚙️ Day<Number>.Tests.Unit/
+│  └─ ✅ Day<Number>/
+|     |- Project files
+|     └- day-<day_number>.inputdata
+|
+└─ 📗 tests/
+   ├─ 🚀 benchmarks/
+   |  └─ ⚙️ Day<Number>.Tests.Benchmarks/
+   └─ 🧪 unit/
+      └─ ⚙️ Day<Number>.Tests.Unit/
+         |- Project files
+         └- day-<day_number>.testdata
 ```
 
 ## 🛠 Usage
 ### Install .NET Core
-Go to: https://dot.net and download the latest version
+Go to [.NET download page](https://dot.net) and download the latest 7.0 version.
 
 ### Run all tasks
 ```bash
