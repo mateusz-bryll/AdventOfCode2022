@@ -1,4 +1,5 @@
 using AdventOfCode.Tasks.Sdk;
+using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 using Runner.Utils.Commands;
 
@@ -26,9 +27,21 @@ public static class ServiceCollectionExtensions
                 return (ICommandHandler)serviceProvider.GetRequiredService(handlerType);
             };
         }));
+        services.AddTransient((Func<IServiceProvider, Func<Type, IValidator?>>)(serviceProvider =>
+        {
+            return (type) =>
+            {
+                var validatorType = typeof(IValidator<>).MakeGenericType(type);
+                return (IValidator?)serviceProvider.GetService(validatorType);
+            };
+        }));
         services.AddSingleton<CommandBus>();
         services.Scan(source => source.FromAssemblyOf<Program>()
             .AddClasses(c => c.AssignableTo(typeof(ICommandHandler<>)))
+            .AsImplementedInterfaces()
+            .WithScopedLifetime());
+        services.Scan(source => source.FromAssemblyOf<Program>()
+            .AddClasses(c => c.AssignableTo(typeof(AbstractValidator<>)))
             .AsImplementedInterfaces()
             .WithScopedLifetime());
         

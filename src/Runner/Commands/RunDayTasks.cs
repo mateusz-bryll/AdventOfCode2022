@@ -1,20 +1,27 @@
 using AdventOfCode.Tasks.Sdk;
 using CommandLine;
+using FluentValidation;
 using Runner.Utils;
 using Runner.Utils.Commands;
 
 namespace Runner.Commands;
 
-public enum Day
-{
-    
-}
-
 [Verb("run-tasks", isDefault: false, HelpText = "Run all tasks for Advent of Code 2022")]
 public class RunDayTasks : ICommand
 {
     [Option('d', "day", Required = true, HelpText = "Day number")]
-    public uint Day { get; set; }
+    public int Day { get; set; }
+}
+
+public class RunDayTasksValidator : AbstractValidator<RunDayTasks>
+{
+    public RunDayTasksValidator()
+    {
+        RuleFor(x => x.Day)
+            .GreaterThanOrEqualTo(1)
+            .LessThanOrEqualTo(25)
+            .WithErrorCode("DayOutOfRange");
+    }
 }
 
 public class RunDayTasksHandler : ICommandHandler<RunDayTasks>
@@ -28,12 +35,6 @@ public class RunDayTasksHandler : ICommandHandler<RunDayTasks>
     
     public void Handle(RunDayTasks command)
     {
-        if (command.Day > 25)
-        {
-            Console.WriteLine($"There are only 25 days in the AoC calendar ;)");
-            return;
-        }
-        
         var tasksToExecute = tasks.FirstOrDefault(t => t.DayNumber == command.Day);
 
         if (tasksToExecute is null)
