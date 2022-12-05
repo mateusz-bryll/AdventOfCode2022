@@ -1,19 +1,28 @@
 using DayFive.Domain;
+using DayFive.Domain.CargoCraneFeatures;
 
 namespace DayFive;
 
 public static class InputParser
 {
-    public static SupplyStacks ParseSupplyStacksInitialState(IEnumerable<string> inputLines, out int parsedLines)
+    public static (SupplyStacks SupplyStacks, IEnumerable<CargoCraneMoveOperation> CratesRearrangeProcedure) ParseInput(IEnumerable<string> inputLines)
+    {
+        var supplyStacks = ParseSupplyStacksCurrentState(inputLines, out var parsedLines);
+
+        return (supplyStacks, inputLines.Skip(parsedLines).Select(ParseCargoCraneMoveOperation));
+    }
+
+    private static SupplyStacks ParseSupplyStacksCurrentState(IEnumerable<string> inputLines, out int parsedLines)
     {
         parsedLines = 0;
         var supplyStacksStateLines = new Stack<string>();
         foreach (var line in inputLines)
         {
             parsedLines++;
+            
             if (string.IsNullOrEmpty(line))
                 break;
-            
+
             supplyStacksStateLines.Push(line);
         }
 
@@ -25,25 +34,23 @@ public static class InputParser
         while (supplyStacksStateLines.Count > 0)
         {
             var cratesLine = supplyStacksStateLines.Pop();
-            foreach (var crate in ParseCratesLine(numberOfStacks, cratesLine))
-            {
+            foreach (var crate in ParseCrates(numberOfStacks, cratesLine))
                 supplyStacks.PlaceCrateOnStack(crate.StackNumber, crate.Crate);
-            }
         }
 
         return supplyStacks;
     }
 
-    public static SupplyStacksMoveCommand ParseMoveCommand(string moveCommandLine)
+    private static CargoCraneMoveOperation ParseCargoCraneMoveOperation(string moveCommandLine)
     {
         var parts = moveCommandLine.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-        return new SupplyStacksMoveCommand(int.Parse(parts[1]), int.Parse(parts[3]), int.Parse(parts[5]));
+        return new CargoCraneMoveOperation(int.Parse(parts[1]), int.Parse(parts[3]), int.Parse(parts[5]));
     }
     
-    private static IEnumerable<(int StackNumber, char Crate)> ParseCratesLine(int numberOfStacks, string cratesLine)
+    private static IEnumerable<(int StackNumber, char Crate)> ParseCrates(int numberOfStacks, string cratesLine)
     {
-        const int crateSize = 4;
-        for (int i = 1, j = 1; i < numberOfStacks * crateSize; i += crateSize, j++)
+        const int gapBetweenCrates = 4;
+        for (int i = 1, j = 1; i < numberOfStacks * gapBetweenCrates; i += gapBetweenCrates, j++)
         {
             if (cratesLine[i] == ' ')
                 continue;
