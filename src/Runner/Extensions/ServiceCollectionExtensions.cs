@@ -11,8 +11,8 @@ public static class ServiceCollectionExtensions
     public static IServiceCollection AddTasks(this IServiceCollection services)
     {
         services.Scan(source => source.FromApplicationDependencies()
-            .AddClasses(c => c.AssignableTo<ITasks>())
-            .AsImplementedInterfaces()
+            .AddClasses(c => c.AssignableTo(typeof(ITasks<,>)))
+            .As<ITasksMetadata>()
             .WithScopedLifetime());
         
         return services;

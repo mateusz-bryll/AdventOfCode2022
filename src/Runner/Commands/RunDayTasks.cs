@@ -26,9 +26,9 @@ public class RunDayTasksValidator : AbstractValidator<RunDayTasks>
 
 public class RunDayTasksHandler : ICommandHandler<RunDayTasks>
 {
-    private readonly IEnumerable<ITasks> tasks;
+    private readonly IEnumerable<ITasksMetadata> tasks;
 
-    public RunDayTasksHandler(IEnumerable<ITasks> tasks)
+    public RunDayTasksHandler(IEnumerable<ITasksMetadata> tasks)
     {
         this.tasks = tasks;
     }

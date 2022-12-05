@@ -4,9 +4,25 @@ using BenchmarkDotNet.Attributes;
 
 namespace AdventOfCode.Benchmarks.Sdk;
 
+public abstract class BenchmarkFor<TTasks> : BenchmarkFor<TTasks, int>
+    where TTasks : ITasks<int>
+{
+    protected BenchmarkFor(TTasks tasks) : base(tasks)
+    {
+    }
+}
+
+public abstract class BenchmarkFor<TTasks, TTasksResult> : BenchmarkFor<TTasks, TTasksResult, TTasksResult>
+    where TTasks : ITasks<TTasksResult>
+{
+    protected BenchmarkFor(TTasks tasks) : base(tasks)
+    {
+    }
+}
+
 [MemoryDiagnoser]
-public abstract class BenchmarkFor<TTasks> : IBenchmark
-    where TTasks : ITasks
+public abstract class BenchmarkFor<TTasks, TFirstTaskResult, TSecondTaskResult> : IBenchmark
+    where TTasks : ITasks<TFirstTaskResult, TSecondTaskResult>
 {
     public int DayNumber => tasks.DayNumber;
     private readonly TTasks tasks;
@@ -20,13 +36,13 @@ public abstract class BenchmarkFor<TTasks> : IBenchmark
     public IEnumerable<string> BenchmarkInputData { get; set; } = default!;
     
     [Benchmark]
-    public int Basic()
+    public TFirstTaskResult Basic()
     {
         return tasks.GetBasicTaskResult(BenchmarkInputData);
     }
 
     [Benchmark]
-    public int Advanced()
+    public TSecondTaskResult Advanced()
     {
         return tasks.GetAdvancedTaskResult(BenchmarkInputData);
     }

@@ -13,9 +13,9 @@ public class RunAllTasks : ICommand
 
 public class RunAllTasksHandler : ICommandHandler<RunAllTasks>
 {
-    private readonly IEnumerable<ITasks> tasks;
+    private readonly IEnumerable<ITasksMetadata> tasks;
 
-    public RunAllTasksHandler(IEnumerable<ITasks> tasks)
+    public RunAllTasksHandler(IEnumerable<ITasksMetadata> tasks)
     {
         this.tasks = tasks;
     }
