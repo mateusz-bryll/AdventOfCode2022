@@ -7,6 +7,7 @@ public class DayFiveTasks : ITasks<string>
 {
     public int DayNumber => 5;
     
+    [TaskResultDescription("are the crates on top of each stack (CrateMover 9000)")]
     public string GetBasicTaskResult(IEnumerable<string> input)
     {
         var supplyStacks = InputParser.ParseSupplyStacksInitialState(input, out var parsedLines);
@@ -19,6 +20,7 @@ public class DayFiveTasks : ITasks<string>
         return supplyStacks.GetCratesFromTopOfEveryStack();
     }
 
+    [TaskResultDescription("are the crates on top of each stack (CrateMover 9001)")]
     public string GetAdvancedTaskResult(IEnumerable<string> input)
     {
         var supplyStacks = InputParser.ParseSupplyStacksInitialState(input, out var parsedLines);
