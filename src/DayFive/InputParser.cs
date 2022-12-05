@@ -43,7 +43,7 @@ public static class InputParser
 
     private static CargoCraneMoveOperation ParseCargoCraneMoveOperation(string moveCommandLine)
     {
-        var parts = moveCommandLine.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+        var parts = new StringParts(moveCommandLine, ' ');
         return new CargoCraneMoveOperation(int.Parse(parts[1]), int.Parse(parts[3]), int.Parse(parts[5]));
     }
     
@@ -56,6 +56,34 @@ public static class InputParser
                 continue;
             
             yield return (j, cratesLine[i]);
+        }
+    }
+    
+    private readonly ref struct StringParts
+    {
+        private readonly string text;
+        private readonly char separator;
+    
+        public StringParts(string text, char separator)
+        {
+            this.text = text;
+            this.separator = separator;
+        }
+    
+        public ReadOnlySpan<char> this[int index]
+        {
+            get
+            {
+                var span = text.AsSpan();
+                for (var i = 0; i < index; i++)
+                {
+                    var separatorIndex = span.IndexOf(separator);
+                    span = span[(separatorIndex + 1)..];
+                }
+            
+                var endOfCurrentMatch = span.IndexOf(separator);
+                return endOfCurrentMatch >= 0 ? span[..endOfCurrentMatch] : span;
+            }
         }
     }
 }
