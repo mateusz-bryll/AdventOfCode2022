@@ -9,7 +9,7 @@ Collect ⭐s by solving puzzles. Two puzzles will be made available on each day 
 
 
 ## 🦌🦌 My progress 🦌🦌
-⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★
 
 ![Calendar](./docs/assets/calendar.png)
 
@@ -20,6 +20,7 @@ Collect ⭐s by solving puzzles. Two puzzles will be made available on each day 
 | 02  | [Rock Paper Scissors](./docs/tasks/DayTwo.md)       | ⭐ ⭐          | [Benchmarks](./docs/results/DayTwo.md)   |
 | 03  | [Rucksack Reorganization](./docs/tasks/DayThree.md) | ⭐ ⭐          | [Benchmarks](./docs/results/DayThree.md) |
 | 04  | [Camp Cleanup](./docs/tasks/DayFour.md)             | ⭐ ⭐          | [Benchmarks](./docs/results/DayFour.md)  |
+| 05  | [Supply Stacks](./docs/tasks/DayFive.md)            | ⭐ ⭐          | [Benchmarks](./docs/results/DayFive.md)  |
 
 ## 📂 Structure
 * Every task has a dedicated .NET 7.0 project in the `src` directory.
