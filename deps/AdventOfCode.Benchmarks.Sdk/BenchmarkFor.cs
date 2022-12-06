@@ -1,4 +1,3 @@
-using System.Text;
 using AdventOfCode.Tasks.Sdk;
 using BenchmarkDotNet.Attributes;
 
@@ -46,10 +45,12 @@ public abstract class BenchmarkFor<TTasks, TFirstTaskResult, TSecondTaskResult> 
     {
         return tasks.GetAdvancedTaskResult(BenchmarkInputData);
     }
+
+    protected virtual InputSize InputSize => InputSize.FileLines;
     
     public IEnumerable<IEnumerable<string>> Data => new[]
     {
-        File.ReadLines(Path.Combine(AppContext.BaseDirectory, $"day-{tasks.DayNumber:D2}.inputdata"), Encoding.UTF8).ToArray(),
-        File.ReadLines(Path.Combine(AppContext.BaseDirectory, $"day-{tasks.DayNumber:D2}.testdata"), Encoding.UTF8).ToArray()
+        $"day-{tasks.DayNumber:D2}.inputdata".ToInput(InputSize),
+        $"day-{tasks.DayNumber:D2}.testdata".ToInput(InputSize)
     };
 }
