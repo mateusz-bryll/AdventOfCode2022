@@ -33,20 +33,4 @@ public class FileSystem
     {
         CurrentDirectory?.AddSubdirectory(new Directory(name, CurrentDirectory));
     }
-
-    public int SumDirectoriesWithTotalSizeOfAtMost(int size)
-    {
-        return RootDirectory.GetDirectories()
-            .Where(dir => dir.Size <= size)
-            .Sum(dir => dir.Size);
-    }
-
-    public int SizeOfTheSmallestDirectory(int size)
-    {
-        var directoryToDelete = RootDirectory.GetDirectories()
-            .Where(dir => dir.Size >= size)
-            .Min(dir => dir.Size);
-
-        return directoryToDelete;
-    }
 }
