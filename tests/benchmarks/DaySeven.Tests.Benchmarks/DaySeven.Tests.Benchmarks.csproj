@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\deps\AdventOfCode.Benchmarks.Sdk\AdventOfCode.Benchmarks.Sdk.csproj" />
+      <ProjectReference Include="..\..\..\src\DaySeven\DaySeven.csproj" />
+      <ProjectReference Include="..\..\unit\DaySeven.Tests.Unit\DaySeven.Tests.Unit.csproj" />
+    </ItemGroup>
+
+</Project>
