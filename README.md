@@ -92,7 +92,6 @@ dotnet run -c Release -- run-benchmark -d <day_number>
 ## 📜 Wants more?
 Check out my colleagues repositories, who are also taking part in this year AoC.
 - [Lidjan](https://github.com/minidmnv/aoc2022) (TypeScript)
-- [Raghval](https://gitlab.com/arturmlody/adventofcode) (C#)
 
 ## 🧙 Author
 Authored completely by Mateusz Bryll
