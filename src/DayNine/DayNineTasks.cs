@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices.ComTypes;
 using AdventOfCode.Tasks.Sdk;
 
 namespace DayNine;
@@ -61,68 +62,24 @@ public sealed class DayNineTasks : ITasks
         var offsetX = head.X - tail.X;
         var offsetY = head.Y - tail.Y;
 
-        if (offsetX == 0 && offsetY == 0)
-            return;
-        
-        if (offsetX == 0)
+        switch (Math.Abs(offsetX), Math.Abs(offsetY))
         {
-            tail.Y += offsetY < 0 ? offsetY + 1 : offsetY - 1;
-        }
-        else if (offsetY == 0)
-        {
-            tail.X += offsetX < 0 ? offsetX + 1 : offsetX - 1;
-        }
-        else if (Math.Abs(offsetX) == 2 && offsetY > 0)
-        {
-            if (offsetX > 0)
-            {
-                tail.X += 1;
-                tail.Y += 1;
-            }
-            else
-            {
-                tail.X -= 1;
-                tail.Y += 1;
-            }
-        }
-        else if (Math.Abs(offsetX) == 2 && offsetY < 0)
-        {
-            if (offsetX > 0)
-            {
-                tail.X += 1;
-                tail.Y -= 1;
-            }
-            else
-            {
-                tail.X -= 1;
-                tail.Y -= 1;
-            }
-        }
-        else if (Math.Abs(offsetY) == 2 && offsetX > 0)
-        {
-            if (offsetY > 0)
-            {
-                tail.X += 1;
-                tail.Y += 1;
-            }
-            else
-            {
-                tail.X += 1;
-                tail.Y -= 1;
-            }
-        }
-        else if (Math.Abs(offsetY) == 2 && offsetX < 0)
-        {
-            if (offsetY > 0)
-            {
-                tail.X -= 1;
-                tail.Y += 1;
-            }
-            else
-            {
-                tail.X -= 1;
-                tail.Y -= 1;
-            }
+            case (0, 0):
+                break;
+            case (0, _):
+                tail.Y += offsetY < 0 ? offsetY + 1 : offsetY - 1;
+                break;
+            case (_, 0):
+                tail.X += offsetX < 0 ? offsetX + 1 : offsetX - 1;
+                break;
+            case (2, _):
+                tail.X += offsetX > 0 ? 1 : -1;
+                tail.Y += offsetY > 0 ? 1 : -1;
+                break;
+            case (_, 2):
+                tail.X += offsetX > 0 ? 1 : -1;
+                tail.Y += offsetY > 0 ? 1 : -1;
+                break;
         }
     }
 }
