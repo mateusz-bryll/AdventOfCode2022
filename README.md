@@ -9,7 +9,7 @@ Collect ⭐s by solving puzzles. Two puzzles will be made available on each day 
 
 
 ## 🦌🦌 My progress 🦌🦌
-⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★
 
 ![Calendar](./docs/assets/calendar.png)
 
@@ -24,6 +24,7 @@ Collect ⭐s by solving puzzles. Two puzzles will be made available on each day 
 | 06  | [Tuning Trouble](./docs/tasks/DaySix.md)            | ⭐ ⭐          | [Benchmarks](./docs/results/DaySix.md)   |
 | 07  | [No Space Left On Device](./docs/tasks/DaySeven.md) | ⭐ ⭐          | [Benchmarks](./docs/results/DaySeven.md) |
 | 08  | [Treetop Tree House](./docs/tasks/DayEight.md)      | ⭐ ⭐          | [Benchmarks](./docs/results/DayEight.md) |
+| 09  | [Rope Bridge](./docs/tasks/DayNine.md)              | ⭐ ⭐          | [Benchmarks](./docs/results/DayNine.md)  |
 
 ## 📂 Structure
 * Every task has a dedicated .NET 7.0 project in the `src` directory.

@@ -12,6 +12,7 @@
       <ProjectReference Include="..\..\tests\benchmarks\DayEight.Tests.Benchmarks\DayEight.Tests.Benchmarks.csproj" />
       <ProjectReference Include="..\..\tests\benchmarks\DayFive.Tests.Benchmarks\DayFive.Tests.Benchmarks.csproj" />
       <ProjectReference Include="..\..\tests\benchmarks\DayFour.Tests.Benchmarks\DayFour.Tests.Benchmarks.csproj" />
+      <ProjectReference Include="..\..\tests\benchmarks\DayNine.Tests.Benchmarks\DayNine.Tests.Benchmarks.csproj" />
       <ProjectReference Include="..\..\tests\benchmarks\DayOne.Tests.Benchmarks\DayOne.Tests.Benchmarks.csproj" />
       <ProjectReference Include="..\..\tests\benchmarks\DaySeven.Tests.Benchmarks\DaySeven.Tests.Benchmarks.csproj" />
       <ProjectReference Include="..\..\tests\benchmarks\DaySix.Tests.Benchmarks\DaySix.Tests.Benchmarks.csproj" />
@@ -20,6 +21,7 @@
       <ProjectReference Include="..\DayEight\DayEight.csproj" />
       <ProjectReference Include="..\DayFive\DayFive.csproj" />
       <ProjectReference Include="..\DayFour\DayFour.csproj" />
+      <ProjectReference Include="..\DayNine\DayNine.csproj" />
       <ProjectReference Include="..\DayOne\DayOne.csproj" />
       <ProjectReference Include="..\DaySeven\DaySeven.csproj" />
       <ProjectReference Include="..\DaySix\DaySix.csproj" />

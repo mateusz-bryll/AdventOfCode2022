@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\deps\AdventOfCode.Benchmarks.Sdk\AdventOfCode.Benchmarks.Sdk.csproj" />
+      <ProjectReference Include="..\..\..\src\DayNine\DayNine.csproj" />
+      <ProjectReference Include="..\..\unit\DayNine.Tests.Unit\DayNine.Tests.Unit.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="day-09.testdata" />
+      <Content Include="day-09.testdata">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
+</Project>

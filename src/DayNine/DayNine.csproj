@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+    
+    <ItemGroup>
+        <InternalsVisibleTo Include="DayNine.Tests.Unit" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\deps\AdventOfCode.Tasks.Sdk\AdventOfCode.Tasks.Sdk.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="day-09.inputdata" />
+      <Content Include="day-09.inputdata">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
+</Project>

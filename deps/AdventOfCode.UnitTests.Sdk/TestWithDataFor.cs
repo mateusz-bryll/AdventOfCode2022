@@ -1,3 +1,4 @@
+using System.Reflection;
 using System.Text;
 using AdventOfCode.Tasks.Sdk;
 using Xunit;
@@ -33,7 +34,7 @@ public abstract class TestWithDataFor<TTasks, TFirstTaskResult, TSecondTaskResul
     [Fact]
     public void GetBasicTaskResult()
     {
-        var result = tasks.GetBasicTaskResult(TestData);
+        var result = tasks.GetBasicTaskResult(TestData(GetTestDataFileName(AssertGetBasicTaskResult)));
         AssertGetBasicTaskResult(result);
     }
 
@@ -42,11 +43,33 @@ public abstract class TestWithDataFor<TTasks, TFirstTaskResult, TSecondTaskResul
     [Fact]
     public void GetAdvancedTaskResult()
     {
-        var result = tasks.GetAdvancedTaskResult(TestData);
+        var result = tasks.GetAdvancedTaskResult(TestData(GetTestDataFileName(AssertGetAdvancedTaskResult)));
         AssertGetAdvancedTaskResult(result);
     }
     
     protected abstract void AssertGetAdvancedTaskResult(TSecondTaskResult result);
 
-    private IEnumerable<string> TestData => File.ReadLines($"day-{tasks.DayNumber:D2}.testdata", Encoding.UTF8);
+    private IEnumerable<string> TestData(string fileName) => File.ReadLines(fileName, Encoding.UTF8);
+
+    private string GetTestDataFileName(Delegate testMethod)
+    {
+        var customTestDataFileSuffixAttribute =
+            testMethod.Method.GetCustomAttribute(typeof(CustomTestDataFileSuffixAttribute)) as
+                CustomTestDataFileSuffixAttribute;
+
+        return customTestDataFileSuffixAttribute is null
+            ? $"day-{tasks.DayNumber:D2}.testdata"
+            : $"day-{tasks.DayNumber:D2}.{customTestDataFileSuffixAttribute.Suffix}.testdata";
+    }
+}
+
+[AttributeUsage(AttributeTargets.Method)]
+public class CustomTestDataFileSuffixAttribute : Attribute
+{
+    public string Suffix { get; }
+
+    public CustomTestDataFileSuffixAttribute(string suffix)
+    {
+        Suffix = suffix;
+    }
 }
