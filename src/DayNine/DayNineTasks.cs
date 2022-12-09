@@ -26,8 +26,9 @@ public sealed class DayNineTasks : ITasks
         result.Add((0, 0));
         foreach (var move in moves)
         {
-            var direction = move[0];
-            var steps = int.Parse(move[2..]);
+            var moveSpan = move.AsSpan();
+            var direction = moveSpan[0];
+            var steps = int.Parse(moveSpan[2..]);
 
             for (var i = 0; i < steps; i++)
             {

@@ -2,10 +2,10 @@
 ### Windows (i9 9900K, 64GB RAM)
 | Method   | BenchmarkInputData |         Mean |     Error |    StdDev |    Gen0 |    Gen1 |    Gen2 | Allocated |
 |----------|--------------------|-------------:|----------:|----------:|--------:|--------:|--------:|----------:|
-| Basic    | N=2000,00          |   646.509 us | 6.8108 us | 5.6873 us | 41.0156 | 41.0156 | 41.0156 |  373982 B |
-| Advanced | N=2000,00          | 1,049.194 us | 6.0969 us | 5.4048 us | 23.4375 |  5.8594 |       - |  205601 B |
-| Basic    | N=8,00             |     1.127 us | 0.0069 us | 0.0061 us |  0.1221 |       - |       - |    1032 B |
-| Advanced | N=8,00             |     1.437 us | 0.0114 us | 0.0107 us |  0.0610 |       - |       - |     512 B |
+| Basic    | N=2000,00          |   642.109 us | 7.6454 us | 7.1515 us | 41.0156 | 41.0156 | 41.0156 |  322710 B |
+| Advanced | N=2000,00          | 1,079.569 us | 9.6878 us | 8.5880 us | 17.5781 |  3.9063 |       - |  154329 B |
+| Basic    | N=8,00             |     1.061 us | 0.0054 us | 0.0048 us |  0.0992 |       - |       - |     840 B |
+| Advanced | N=8,00             |     1.357 us | 0.0186 us | 0.0174 us |  0.0381 |       - |       - |     320 B |
 
 ### MacOS (Macbook Pro (2021) M1 Pro, 32GB RAM)
 | Method   | BenchmarkInputData |         Mean |       Error |      StdDev |     Gen0 |     Gen1 |    Gen2 | Allocated |
