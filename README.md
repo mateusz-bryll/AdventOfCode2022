@@ -9,7 +9,7 @@ Collect ⭐s by solving puzzles. Two puzzles will be made available on each day 
 
 
 ## 🦌🦌 My progress 🦌🦌
-⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★
 
 ![Calendar](./docs/assets/calendar.png)
 
@@ -25,6 +25,7 @@ Collect ⭐s by solving puzzles. Two puzzles will be made available on each day 
 | 07  | [No Space Left On Device](./docs/tasks/DaySeven.md) | ⭐ ⭐          | [Benchmarks](./docs/results/DaySeven.md) |
 | 08  | [Treetop Tree House](./docs/tasks/DayEight.md)      | ⭐ ⭐          | [Benchmarks](./docs/results/DayEight.md) |
 | 09  | [Rope Bridge](./docs/tasks/DayNine.md)              | ⭐ ⭐          | [Benchmarks](./docs/results/DayNine.md)  |
+| 10  | [Cathode-Ray Tube](./docs/tasks/DayTen.md)          | ⭐ ⭐          | [Benchmarks](./docs/results/DayTen.md)   |
 
 ## 📂 Structure
 * Every task has a dedicated .NET 7.0 project in the `src` directory.

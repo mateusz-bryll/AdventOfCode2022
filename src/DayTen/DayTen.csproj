@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\deps\AdventOfCode.Tasks.Sdk\AdventOfCode.Tasks.Sdk.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="day-10.inputdata" />
+      <Content Include="day-10.inputdata">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="CommunityToolkit.HighPerformance" Version="8.1.0-preview1" />
+    </ItemGroup>
+
+</Project>
