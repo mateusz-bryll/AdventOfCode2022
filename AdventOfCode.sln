@@ -54,6 +54,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tasks", "tasks", "{7703E83B
 		docs\tasks\DayEight.md = docs\tasks\DayEight.md
 		docs\tasks\DayNine.md = docs\tasks\DayNine.md
 		docs\tasks\DayTen.md = docs\tasks\DayTen.md
+		docs\tasks\DayEleven.md = docs\tasks\DayEleven.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "results", "results", "{28B3095E-5504-44FD-A721-1BE906F54330}"
@@ -68,6 +69,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "results", "results", "{28B3
 		docs\results\DayEight.md = docs\results\DayEight.md
 		docs\results\DayNine.md = docs\results\DayNine.md
 		docs\results\DayTen.md = docs\results\DayTen.md
+		docs\results\DayEleven.md = docs\results\DayEleven.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{716776A1-4C0F-43FF-B2B1-194AAFCC5E0D}"
@@ -120,6 +122,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayTen.Tests.Unit", "tests\unit\DayTen.Tests.Unit\DayTen.Tests.Unit.csproj", "{9D9C524D-36FD-440D-863B-A46A6FB2C21D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayTen.Tests.Benchmarks", "tests\benchmarks\DayTen.Tests.Benchmarks\DayTen.Tests.Benchmarks.csproj", "{DC11D11C-9AE4-46B2-89D8-1F81563EC2B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayEleven", "src\DayEleven\DayEleven.csproj", "{A6C1B628-4C5C-467E-8786-B76074BC1638}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayEleven.Tests.Unit", "tests\unit\DayEleven.Tests.Unit\DayEleven.Tests.Unit.csproj", "{689ED78C-2C4A-43AC-8051-07739F93C1E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayEleven.Tests.Benchmarks", "tests\benchmarks\DayEleven.Tests.Benchmarks\DayEleven.Tests.Benchmarks.csproj", "{FE54379E-DE08-4B84-8303-C8487BE3E2E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -263,6 +271,18 @@ Global
 		{DC11D11C-9AE4-46B2-89D8-1F81563EC2B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC11D11C-9AE4-46B2-89D8-1F81563EC2B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC11D11C-9AE4-46B2-89D8-1F81563EC2B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6C1B628-4C5C-467E-8786-B76074BC1638}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6C1B628-4C5C-467E-8786-B76074BC1638}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6C1B628-4C5C-467E-8786-B76074BC1638}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6C1B628-4C5C-467E-8786-B76074BC1638}.Release|Any CPU.Build.0 = Release|Any CPU
+		{689ED78C-2C4A-43AC-8051-07739F93C1E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{689ED78C-2C4A-43AC-8051-07739F93C1E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{689ED78C-2C4A-43AC-8051-07739F93C1E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{689ED78C-2C4A-43AC-8051-07739F93C1E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE54379E-DE08-4B84-8303-C8487BE3E2E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE54379E-DE08-4B84-8303-C8487BE3E2E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE54379E-DE08-4B84-8303-C8487BE3E2E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE54379E-DE08-4B84-8303-C8487BE3E2E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{DA23EBCC-F8AA-4176-8FFF-41A488EB9E55} = {370DF490-AA80-48D5-BBFB-C8FC81C626DA}
@@ -304,5 +324,8 @@ Global
 		{E78B9C2B-786E-46CC-90E5-3682E0964162} = {370DF490-AA80-48D5-BBFB-C8FC81C626DA}
 		{9D9C524D-36FD-440D-863B-A46A6FB2C21D} = {2BA83DD6-C344-4E18-9B9D-D8022C06B42D}
 		{DC11D11C-9AE4-46B2-89D8-1F81563EC2B9} = {8E326F26-C854-4E51-A66B-140CAAA05417}
+		{A6C1B628-4C5C-467E-8786-B76074BC1638} = {370DF490-AA80-48D5-BBFB-C8FC81C626DA}
+		{689ED78C-2C4A-43AC-8051-07739F93C1E1} = {2BA83DD6-C344-4E18-9B9D-D8022C06B42D}
+		{FE54379E-DE08-4B84-8303-C8487BE3E2E8} = {8E326F26-C854-4E51-A66B-140CAAA05417}
 	EndGlobalSection
 EndGlobal

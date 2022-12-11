@@ -9,23 +9,24 @@ Collect ⭐s by solving puzzles. Two puzzles will be made available on each day 
 
 
 ## 🦌🦌 My progress 🦌🦌
-⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★
 
 ![Calendar](./docs/assets/calendar.png)
 
 ## ✔️ Tasks
-| Day | Task details                                        | Collected ⭐s | Benchmark results                        |
-|-----|-----------------------------------------------------|--------------|------------------------------------------|
-| 01  | [Calorie Counting](./docs/tasks/DayOne.md)          | ⭐ ⭐          | [Benchmarks](./docs/results/DayOne.md)   |
-| 02  | [Rock Paper Scissors](./docs/tasks/DayTwo.md)       | ⭐ ⭐          | [Benchmarks](./docs/results/DayTwo.md)   |
-| 03  | [Rucksack Reorganization](./docs/tasks/DayThree.md) | ⭐ ⭐          | [Benchmarks](./docs/results/DayThree.md) |
-| 04  | [Camp Cleanup](./docs/tasks/DayFour.md)             | ⭐ ⭐          | [Benchmarks](./docs/results/DayFour.md)  |
-| 05  | [Supply Stacks](./docs/tasks/DayFive.md)            | ⭐ ⭐          | [Benchmarks](./docs/results/DayFive.md)  |
-| 06  | [Tuning Trouble](./docs/tasks/DaySix.md)            | ⭐ ⭐          | [Benchmarks](./docs/results/DaySix.md)   |
-| 07  | [No Space Left On Device](./docs/tasks/DaySeven.md) | ⭐ ⭐          | [Benchmarks](./docs/results/DaySeven.md) |
-| 08  | [Treetop Tree House](./docs/tasks/DayEight.md)      | ⭐ ⭐          | [Benchmarks](./docs/results/DayEight.md) |
-| 09  | [Rope Bridge](./docs/tasks/DayNine.md)              | ⭐ ⭐          | [Benchmarks](./docs/results/DayNine.md)  |
-| 10  | [Cathode-Ray Tube](./docs/tasks/DayTen.md)          | ⭐ ⭐          | [Benchmarks](./docs/results/DayTen.md)   |
+| Day | Task details                                        | Collected ⭐s | Benchmark results                         |
+|-----|-----------------------------------------------------|--------------|-------------------------------------------|
+| 01  | [Calorie Counting](./docs/tasks/DayOne.md)          | ⭐ ⭐          | [Benchmarks](./docs/results/DayOne.md)    |
+| 02  | [Rock Paper Scissors](./docs/tasks/DayTwo.md)       | ⭐ ⭐          | [Benchmarks](./docs/results/DayTwo.md)    |
+| 03  | [Rucksack Reorganization](./docs/tasks/DayThree.md) | ⭐ ⭐          | [Benchmarks](./docs/results/DayThree.md)  |
+| 04  | [Camp Cleanup](./docs/tasks/DayFour.md)             | ⭐ ⭐          | [Benchmarks](./docs/results/DayFour.md)   |
+| 05  | [Supply Stacks](./docs/tasks/DayFive.md)            | ⭐ ⭐          | [Benchmarks](./docs/results/DayFive.md)   |
+| 06  | [Tuning Trouble](./docs/tasks/DaySix.md)            | ⭐ ⭐          | [Benchmarks](./docs/results/DaySix.md)    |
+| 07  | [No Space Left On Device](./docs/tasks/DaySeven.md) | ⭐ ⭐          | [Benchmarks](./docs/results/DaySeven.md)  |
+| 08  | [Treetop Tree House](./docs/tasks/DayEight.md)      | ⭐ ⭐          | [Benchmarks](./docs/results/DayEight.md)  |
+| 09  | [Rope Bridge](./docs/tasks/DayNine.md)              | ⭐ ⭐          | [Benchmarks](./docs/results/DayNine.md)   |
+| 10  | [Cathode-Ray Tube](./docs/tasks/DayTen.md)          | ⭐ ⭐          | [Benchmarks](./docs/results/DayTen.md)    |
+| 11  | [Monkey in the Middle](./docs/tasks/DayEleven.md)   | ⭐ ⭐          | [Benchmarks](./docs/results/DayEleven.md) |
 
 ## 📂 Structure
 * Every task has a dedicated .NET 7.0 project in the `src` directory.

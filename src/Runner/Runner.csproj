@@ -10,6 +10,7 @@
     <ItemGroup>
       <ProjectReference Include="..\..\deps\AdventOfCode.Tasks.Sdk\AdventOfCode.Tasks.Sdk.csproj" />
       <ProjectReference Include="..\..\tests\benchmarks\DayEight.Tests.Benchmarks\DayEight.Tests.Benchmarks.csproj" />
+      <ProjectReference Include="..\..\tests\benchmarks\DayEleven.Tests.Benchmarks\DayEleven.Tests.Benchmarks.csproj" />
       <ProjectReference Include="..\..\tests\benchmarks\DayFive.Tests.Benchmarks\DayFive.Tests.Benchmarks.csproj" />
       <ProjectReference Include="..\..\tests\benchmarks\DayFour.Tests.Benchmarks\DayFour.Tests.Benchmarks.csproj" />
       <ProjectReference Include="..\..\tests\benchmarks\DayNine.Tests.Benchmarks\DayNine.Tests.Benchmarks.csproj" />
@@ -20,6 +21,7 @@
       <ProjectReference Include="..\..\tests\benchmarks\DayThree.Tests.Benchmarks\DayThree.Tests.Benchmarks.csproj" />
       <ProjectReference Include="..\..\tests\benchmarks\DayTwo.Tests.Benchmarks\DayTwo.Tests.Benchmarks.csproj" />
       <ProjectReference Include="..\DayEight\DayEight.csproj" />
+      <ProjectReference Include="..\DayEleven\DayEleven.csproj" />
       <ProjectReference Include="..\DayFive\DayFive.csproj" />
       <ProjectReference Include="..\DayFour\DayFour.csproj" />
       <ProjectReference Include="..\DayNine\DayNine.csproj" />
